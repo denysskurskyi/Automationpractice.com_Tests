@@ -3,7 +3,7 @@ using NUnitTestProject1.PageObject;
 
 namespace NUnitTestProject1.Test
 {
-    class DeleteButtonInCartTest : StartChrome
+    class DeleteButtonInCart : BaseTestsOperations
     {
         private MainPage mainPage;
         private Cart cart;
@@ -14,6 +14,7 @@ namespace NUnitTestProject1.Test
             mainPage = new MainPage(driver);
             cart = new Cart(driver);
         }
+
         [Test]
         public void DeleteProductFromCart()
         {

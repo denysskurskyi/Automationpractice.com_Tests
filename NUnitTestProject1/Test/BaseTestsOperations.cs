@@ -6,12 +6,11 @@ using NUnitTestProject1.Framework;
 namespace NUnitTestProject1
 {
     [TestFixture]
-    public abstract class StartChrome
+    public class BaseTestsOperations
     {
         protected readonly IWebDriver driver;
-    
 
-        protected StartChrome()
+        protected BaseTestsOperations()
         {
             driver = Selenium.GetChromeDriver();
             driver.Navigate().GoToUrl(Settings.url);

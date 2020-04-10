@@ -4,9 +4,8 @@ using NUnitTestProject1.PageObject;
 namespace NUnitTestProject1.Test
 {
     [TestFixture]
-    public class TotalPriceInCartTest : StartChrome
+    public class TotalPriceInCart : BaseTestsOperations
     {
-
         private MainPage mainPage;
         private Cart cart;
 
@@ -24,7 +23,5 @@ namespace NUnitTestProject1.Test
             Assert.That(cart.TotalPrice(), Is.EqualTo(cart.SumOfPrice()), $"Expected that Total Price ({cart.TotalPrice()}) " +
                 $"is equal to summary price of two products ({cart.SumOfPrice()}) in cart");
         }
-
-
     }
 }
